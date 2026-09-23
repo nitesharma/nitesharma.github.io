@@ -1,101 +1,157 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/">
-
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="plant_web_app">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <title>Nitesh Sharma</title>
-  <link rel="manifest" href="manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nitesh Sharma — Head of Technology &amp; Operations</title>
+<meta name="description" content="Nitesh Sharma — Head of Technology and Operations at Moe Puppy. I run D2C operations and supply chain, and build the software that runs them.">
+<meta name="theme-color" content="#DD614C">
+<meta property="og:title" content="Nitesh Sharma — Head of Technology &amp; Operations">
+<meta property="og:description" content="I run D2C operations and supply chain for a pet-care brand, and build the software that runs them.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nitesharma.github.io/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- This script installs service_worker.js to provide PWA functionality to
-       application. For more information, see:
-       https://developers.google.com/web/fundamentals/primers/service-workers -->
-  <script>
-    var serviceWorkerVersion = '3866681793';
-    var scriptLoaded = false;
-    function loadMainDartJs() {
-      if (scriptLoaded) {
-        return;
-      }
-      scriptLoaded = true;
-      var scriptTag = document.createElement('script');
-      scriptTag.src = 'main.dart.js';
-      scriptTag.type = 'application/javascript';
-      document.body.append(scriptTag);
-    }
+<header class="bar">
+  <div class="wrap">
+    <span class="who">Nitesh Sharma</span>
+    <nav aria-label="Sections">
+      <a href="#now">Now</a><a href="#work">Work</a><a href="#languages">Languages</a><a href="#stack">Stack</a>
+    </nav>
+    <a class="btn btn-primary btn-offset" href="mailto:nitesharmaa0@gmail.com">Email me</a>
+  </div>
+</header>
 
-    if ('serviceWorker' in navigator) {
-      // Service workers are supported. Use them.
-      window.addEventListener('load', function () {
-        // Wait for registration to finish before dropping the <script> tag.
-        // Otherwise, the browser will load the script multiple times,
-        // potentially different versions.
-        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
-        navigator.serviceWorker.register(serviceWorkerUrl)
-          .then((reg) => {
-            function waitForActivation(serviceWorker) {
-              serviceWorker.addEventListener('statechange', () => {
-                if (serviceWorker.state == 'activated') {
-                  console.log('Installed new service worker.');
-                  loadMainDartJs();
-                }
-              });
-            }
-            if (!reg.active && (reg.installing || reg.waiting)) {
-              // No active web worker and we have installed or are installing
-              // one for the first time. Simply wait for it to activate.
-              waitForActivation(reg.installing || reg.waiting);
-            } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
-              // When the app updates the serviceWorkerVersion changes, so we
-              // need to ask the service worker to update.
-              console.log('New service worker available.');
-              reg.update();
-              waitForActivation(reg.installing);
-            } else {
-              // Existing service worker is still good.
-              console.log('Loading app from service worker.');
-              loadMainDartJs();
-            }
-          });
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">Head of Technology &amp; Operations · Moe Puppy · Gurugram</p>
+    <h1>I run D2C ops.<br><em>And build the software that runs them.</em></h1>
 
-        // If service worker doesn't succeed in a reasonable amount of time,
-        // fallback to plaint <script> tag.
-        setTimeout(() => {
-          if (!scriptLoaded) {
-            console.warn(
-              'Failed to load app from service worker. Falling back to plain <script> tag.',
-            );
-            loadMainDartJs();
-          }
-        }, 4000);
-      });
-    } else {
-      // Service workers not supported. Just drop the <script> tag.
-      loadMainDartJs();
-    }
-  </script>
+    <div class="hero-grid">
+      <div>
+        <p class="statement">Storefront, marketplace advertising, inventory and replenishment, logistics,
+          compliance — and the internal tooling underneath. Right now that&rsquo;s <b>Munshi</b>, the
+          inventory and sales-ops suite my team works in every day.</p>
+        <dl>
+          <dt>Owns</dt><dd>E-commerce operations, inventory, logistics, GST &amp; export compliance, internal tooling</dd>
+          <dt>Builds</dt><dd>Django + DRF backends, Flutter field apps, headless Shopify storefronts</dd>
+          <dt>Private</dt><dd>Most of what I ship. Happy to walk through any of it.</dd>
+        </dl>
+      </div>
+      <div>
+        <p class="lbl" style="margin:0 0 8px">Direct line</p>
+        <p style="margin:0 0 20px;font-size:15px">nitesharmaa0@gmail.com</p>
+        <div class="actions" style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn" href="https://github.com/nitesharma">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/nitesh-sharma-661451193">LinkedIn</a>
+          <a class="btn" href="https://www.instagram.com/nitesharmaa_0/">Instagram</a>
+        </div>
+        <p class="lbl" style="margin:auto 0 0;padding-top:24px;color:#4b5563">Open to operations systems, commerce builds, and problems that need running properly</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat"><b>88</b><span>repositories</span></div>
+  <div class="stat"><b>70.9MB</b><span>tracked source</span></div>
+  <div class="stat"><b>48.8%</b><span>python, by bytes</span></div>
+  <div class="stat"><b>10</b><span>sales channels</span></div>
+</div>
+
+<div class="wrap">
+
+  <section id="now">
+    <div class="sechead"><span class="n">01</span><h2>Now</h2>
+      <p class="note">Gurugram, Haryana · Moe Puppy (Stepett Pet Essentials Pvt Ltd) · currently building Munshi</p></div>
+    <div style="margin-top:24px">
+      <div class="krow"><span class="k">Own</span><span class="v">E-commerce operations · inventory &amp; replenishment · marketplace advertising · logistics · GST &amp; export compliance · internal tooling</span></div>
+      <div class="krow"><span class="k">Building</span><span class="v"><b>Munshi</b> — inventory, proforma → sales order → invoicing, field-agent module. Django + DRF, Postgres, Cloudflare R2, offline-first Flutter app.</span></div>
+      <div class="krow"><span class="k">Channels</span><span class="v">Amazon (IN · UAE · UK · SA) · Flipkart · Blinkit · Zepto · BigBasket · Supertails · Noon · Shopify D2C · B2B</span></div>
+      <div class="krow"><span class="k">Also</span><span class="v">Headless Shopify builds for other brands, client web apps, and an autonomous agent fleet I run my own operations on.</span></div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="sechead"><span class="n">02</span><h2>Selected work</h2>
+      <p class="note">Operations systems, commerce builds, and product work.</p></div>
+
+    <p class="group">Operations systems</p>
+    <div class="wrow"><span class="name">Munshi</span><span class="desc">Inventory, order-to-invoice chain, GST-compliant invoicing, packaging claims, manufacturer reconciliation.</span><span class="stack">Django · DRF · Postgres · R2</span></div>
+    <div class="wrow"><span class="name">Munshi Mobile</span><span class="desc">Field-sales and warehouse app — barcode scanning, geolocation, invoice printing, sync that survives dead zones.</span><span class="stack">Flutter · Riverpod · Drift</span></div>
+    <div class="wrow"><span class="name">Inventory forecasting</span><span class="desc">Multi-channel forecasting and replenishment, ledger against per-ASIN sales velocity.</span><span class="stack">Python · Shopify API</span></div>
+    <div class="wrow"><span class="name">Price tracking</span><span class="desc">Competitor and channel price watch across the catalogue.</span><span class="stack">Shopify API · Playwright</span></div>
+
+    <p class="group">Commerce &amp; storefronts</p>
+    <div class="wrow"><span class="name">Moe Puppy D2C</span><span class="desc">Shopify storefront, marketplace advertising, promotional offers widget, product recommendation quiz.</span><span class="stack">Liquid · Shopify API</span></div>
+    <div class="wrow"><span class="name">Cross Marketing — “Arc &amp; Steel”</span><span class="desc">Shopify theme rebuild for a B2B welding-equipment brand.</span><span class="stack">Liquid</span></div>
+    <div class="wrow"><span class="name">MUERA</span><span class="desc">Menswear commerce with a 3D size configurator and a 30+ table Postgres schema.</span><span class="stack">Shopify · Next.js · Supabase</span></div>
+
+    <p class="group">Product &amp; client builds</p>
+    <div class="wrow"><span class="name">DPS Tatarpur Khalsa ERP</span><span class="desc">Multi-tenant school ERP — fees, homework, exams, transport. Built to be resold to other schools.</span><span class="stack">Next.js · PWA</span></div>
+    <div class="wrow"><span class="name">Vishwatva Dealer Portal</span><span class="desc">Dealer onboarding, tier-based dealership, territory mapping, RBAC, e-signing.</span><span class="stack">Next.js · Supabase</span></div>
+    <div class="wrow"><span class="name">Mrigank Astrology</span><span class="desc">Birth-chart calculator, kundali matching, consultations, blog.</span><span class="stack">Next.js · Firebase</span></div>
+    <div class="wrow"><span class="name">EtchedQR</span><span class="desc">Privacy-first QR generator.</span><span class="stack">Astro · FastAPI · Gemini</span></div>
+    <div class="wrow"><span class="name">Hermes Fleet</span><span class="desc">Autonomous agent fleet shipped as reproducible profile distributions.</span><span class="stack">Python · Hermes</span></div>
+  </section>
+
+  <section id="languages">
+    <div class="sechead"><span class="n">03</span><h2>Languages</h2>
+      <p class="note">GitHub Linguist byte counts across 88 of my 97 non-fork repositories.</p></div>
+    <div class="langbar" role="img" aria-label="Python 48.8%, Dart 18.4%, TypeScript 9.8%, JavaScript 6.5%, Liquid 5.7%, HTML 5.1%, other 5.7%">
+      <span style="width:48.8%;background:#3572A5"></span>
+      <span style="width:18.4%;background:#00B4AB"></span>
+      <span style="width:9.8%;background:#3178c6"></span>
+      <span style="width:6.5%;background:#f1e05a"></span>
+      <span style="width:5.7%;background:#67b8de"></span>
+      <span style="width:5.1%;background:#e34c26"></span>
+      <span style="width:5.7%;background:#9ca3af"></span>
+    </div>
+    <div class="langgrid">
+      <div class="langcell"><b>48.8%</b><span><i style="background:#3572A5"></i>Python</span></div>
+      <div class="langcell"><b>18.4%</b><span><i style="background:#00B4AB"></i>Dart</span></div>
+      <div class="langcell"><b>9.8%</b><span><i style="background:#3178c6"></i>TypeScript</span></div>
+      <div class="langcell"><b>6.5%</b><span><i style="background:#f1e05a"></i>JavaScript</span></div>
+      <div class="langcell"><b>5.7%</b><span><i style="background:#67b8de"></i>Liquid</span></div>
+      <div class="langcell"><b>5.1%</b><span><i style="background:#e34c26"></i>HTML</span></div>
+      <div class="langcell"><b>5.7%</b><span><i style="background:#9ca3af"></i>Other</span></div>
+    </div>
+  </section>
+
+  <section id="stack">
+    <div class="sechead"><span class="n">04</span><h2>Stack</h2>
+      <p class="note">What I reach for, day to day.</p></div>
+    <pre class="code"><code><span class="c"># operations &amp; data</span>   <span class="t">Python</span> · pandas · openpyxl · BigQuery · Playwright
+<span class="c"># backend</span>            <span class="t">Django + DRF</span> · FastAPI · SQLAlchemy · Alembic · Postgres/Neon · Supabase · Firebase
+<span class="c"># frontend</span>           <span class="t">Next.js (App Router)</span> · TypeScript · Tailwind v4 · shadcn/ui · Redux Toolkit
+<span class="c"># mobile</span>             <span class="t">Flutter</span> · Riverpod · Drift/SQLite · Expo / React Native
+<span class="c"># commerce</span>           <span class="t">Shopify Liquid &amp; Hydrogen</span> · Shopify Admin API · Amazon SP-API · Zoho Books
+<span class="c"># infrastructure</span>     <span class="t">Docker</span> · Vercel · Oracle Cloud ARM · Render/Railway · Cloudflare R2</code></pre>
+  </section>
+
+</div>
+
+<div class="band">
+  <div class="wrap">
+    <h2>Let&rsquo;s talk.</h2>
+    <p>Operations systems, commerce builds, or something that needs running properly. Direct line, no forms.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="mailto:nitesharmaa0@gmail.com">Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/nitesh-sharma-661451193">LinkedIn</a>
+      <a class="btn" href="https://github.com/nitesharma">GitHub</a>
+      <a class="btn" href="https://www.instagram.com/nitesharmaa_0/">Instagram</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>Nitesh Sharma — Head of Technology &amp; Operations</p>
+    <p>Moe Puppy · Gurugram, India</p>
+  </div>
+</footer>
 </body>
 </html>
